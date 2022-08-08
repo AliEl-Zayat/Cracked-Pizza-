@@ -45,8 +45,8 @@ nav {
   font-family: var(--mont-font);
   transition: color 0.2s;
 }
-.nav-link:hover{
-  color: #ffc200;
+.active,.nav-link:hover{
+  color: #ffc400bd;
 }
 /* End Nav */
 /* Start Header */
