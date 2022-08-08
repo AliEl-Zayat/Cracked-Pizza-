@@ -46,7 +46,7 @@ nav {
   transition: color 0.2s;
 }
 .active,.nav-link:hover{
-  color: #ffc400bd;
+  color: #ffc400bd !important;
 }
 /* End Nav */
 /* Start Header */
