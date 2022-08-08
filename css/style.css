@@ -94,6 +94,16 @@ header p {
 .best-seller .best-seller-circ p {
   color: #333333;
 }
+.circ-image-holder{
+  border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+.circ-image-holder:hover  img{
+  transform: scale(1.2);
+  transition: all 0.5s ease-in-out;
+
+}
 /* End Best Seller Section */
 
 /* Start Order Section */
@@ -219,9 +229,15 @@ header p {
   opacity: 0.5;
 }
 .subscribe form input[type="submit"] {
-  background-color: #ffc200;
+  background: linear-gradient(to right, #ffc200, #ffc200);
   color: #2f2f2f;
   border-radius: 0 4px 4px 0;
+  transition: all 0.5s ease-in-out;
+}
+.subscribe form input[type="submit"]:hover {
+  background: linear-gradient(to left, #2f2f2f, #2f2f2f);
+  transition: all 0.5s ease-in-out;
+  color: #ffc200;
 }
 /* End Subscribe */
 /* Start Footer */
