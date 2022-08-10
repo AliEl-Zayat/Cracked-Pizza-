@@ -155,7 +155,7 @@ header p {
 /* Start Statistics */
 .statistics {
   background-color: #2f2f2f;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
 }
 .statistics img {
   top: 0;
