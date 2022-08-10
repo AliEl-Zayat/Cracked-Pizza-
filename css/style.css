@@ -5,9 +5,10 @@
   box-sizing: border-box;
 }
 body {
-  font-size: 18px;
+  font-size: 16px;
   overflow-x: hidden;
 }
+
 /* End Globalization */
 /* Start Variables */
 :root {
@@ -32,7 +33,49 @@ body {
 /* End Variables */
 
 /* Start Template Design */
+/* Start modal Styling */
+.site-pauser{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(53, 48, 48, 0.856);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+.modal-dialog{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  background-color: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+}
+.modal-footer{
+  height: calc( (0.5 * 100vh) - 140px);
+}
+.modal-footer .btn-primary{
+  background-color: #ffc200!important;
+  border: none;
+  color: #2f2f2f;
+  font-weight: 600;
+}
+.modal-footer .btn-secondary{
+  border: none;
+  background-color: #2f2f2f;
+  color: #ffc200;
+}
+.modal-footer .btn {
+  transition: 0.2s;
+  padding: 15px;
+}
+  .modal-footer .btn:hover {
+  opacity: 0.8;
 
+}
+/* End modal Styling */
 /* Start Nav */
 nav {
   color: #fff;
@@ -48,20 +91,51 @@ nav {
 .active,.nav-link:hover{
   color: #ffc400bd !important;
 }
+/* Start custom navbar */
+.custom-navbar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2f2f2f;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.navbar-header{
+  right: 20px;
+  color: #ffc200;
+  cursor: pointer;
+}
+.custom-navbar ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  padding: 10px;
+}
+.navbar-toggler:hover,.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0px 0px 10px #ffc200 !important;
+}
+/* End custom navbar */
 /* End Nav */
 /* Start Header */
 header {
   background-color: #2f2f2f;
   height: 100vh;
 }
-.header-content {
-}
 .header-content img .position-absolute {
   z-index: -2;
 }
 header p,
 header h1 {
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
 }
 header h1 {
@@ -72,6 +146,12 @@ header p {
 }
 .text-wrapper {
   height: calc(100vh - 86px);
+}
+.landing-header{
+  overflow: hidden !important;
+}
+.landing-pizza {
+  overflow: hidden;
 }
 /* End Header */
 
@@ -207,12 +287,13 @@ header p {
 /* End yellow-sec */
 /* Start Subscribe */
 .subscribe {
-    background-color: #f4f4f4;
-    background-image: url(../images/section-bg.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-color: #f4f4f4;
+  background-image: url(../images/section-bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .subscribe form {
   display: flex;
   justify-content: center;
@@ -222,6 +303,9 @@ header p {
   border-radius: 4px;
   border: none;
   outline: none;
+}
+.subscribe form input:focus::selection {
+  background-color: #2f2f2f91;
 }
 .subscribe form input#email::placeholder {
   font-size: 14px;
@@ -250,6 +334,14 @@ header p {
     border-radius: 50%;
     background-color: #fff;
     color: #333333;
+}
+footer ul > li:hover {
+  color: #ffc200;
+  cursor: pointer;
+}
+.footer-list-icon:hover{
+  background-color: #ffc4009a;
+  cursor: pointer;
 }
 /* End Footer */
 
